@@ -1,0 +1,21 @@
+<form action="" name="form">
+  <div class="change">
+    <label for="change-inpt">Change</label><br>
+    <input type="number" id="change-inpt" name="input" (keyup)="countLeft($event)" [(ngModel)]="changeAmount">
+    <select name="select-change" (change)="countLeft($event)" [(ngModel)]="changeCurrency">
+      <option value="UAH">UAH</option>
+      <option value="USD">USD</option>
+      <option value="EUR">EUR</option>
+    </select>
+  </div>
+  <div class="receive">
+
+    <label for="receive-inpt">Receive</label><br>
+    <input type="number" id="receive-inpt" name="input2" (keyup)="countRight($event)" [(ngModel)]="receiveAmount">
+    <select name="select-receive" (change)="countRight($event)" [(ngModel)]="receiveCurrency">
+      <option value="UAH">UAH</option>
+      <option value="USD">USD</option>
+      <option value="EUR">EUR</option>
+    </select>
+  </div>
+</form>
